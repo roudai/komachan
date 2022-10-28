@@ -44,3 +44,14 @@ jobs:
 
       - name: Run linter 👀
         run: yarn lint
+
+      - run: yarn generate
+
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          destination_dir: ./docs
