@@ -51,8 +51,4 @@ export default {
   router: {
     base: '/komachan/',
   },
-
-  generate: {
-    dir: 'docs',
-  },
 }
