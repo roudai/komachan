@@ -1,39 +1,36 @@
 <template>
-  <div>
+  <div class="has-background-info-light">
     <nav
-      class="navbar header has-shadow is-primary"
+      class="navbar header has-background-grey-dark"
       role="navigation"
       aria-label="main navigation"
     >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28" />
+      <div class="navbar-brand container column is-four-fifths">
+        <a class="navbar-item has-text-link-light" href="/">
+          #1にち1コマちゃん
         </a>
-
-        <div class="navbar-burger">
-          <span />
-          <span />
-          <span />
-        </div>
       </div>
     </nav>
 
     <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">General</p>
-        <ul class="menu-list">
-          <li v-for="(item, key) of items" :key="key">
-            <NuxtLink :to="item.to" exact-active-class="is-active">
-              <b-icon :icon="item.icon" /> {{ item.title }}
-            </NuxtLink>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
+      <div class="container column is-four-fifths">
         <Nuxt />
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <a href="https://github.com/roudai/komachan">
+            <img
+              :src="require(`@/assets/GitHub-Mark-32px.png?webp`)"
+              class="github"
+            />
+          </a>
+          Presented by <a href="https://twitter.com/w_ty_OvO">@w_ty_OvO</a>.
+        </p>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -54,7 +51,18 @@ export default {
           to: { name: 'inspire' },
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
+
+<style>
+body {
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+img.github {
+  width: 1.2em;
+  height: 1.2em;
+  margin-bottom: -0.2em;
+}
+</style>
