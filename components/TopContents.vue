@@ -2,7 +2,8 @@
   <div class="box has-background-primary-light">
     <h1 class="title is-5">{{ startKoma }}-{{ endKoma }}コマ</h1>
     <span v-for="(k, index) in koma" :key="k">
-      <nuxt-link :to="k">{{ k }}</nuxt-link>
+      <nuxt-link :to="`/${k}`">{{ k }}</nuxt-link>
+      <!-- <a :href="`/${k}`">{{ k }}</a> -->
       {{ index !== koma.length - 1 ? '/' : '' }}
     </span>
   </div>
