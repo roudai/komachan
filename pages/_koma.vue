@@ -3,7 +3,7 @@
     <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
     <figure class="image m-3">
       <div v-for="n in num" :key="n">
-        <img :src="require(`@/assets/${n}コマ.jpg?webp`)" class="mb-3" />
+        <img :src="imagePath(n)" class="mb-3" />
       </div>
     </figure>
     <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
@@ -24,6 +24,15 @@ export default {
     for (let i = this.startKoma; i <= this.endKoma; i += 1) {
       this.num.push(i);
     }
+  },
+  methods: {
+    imagePath(n) {
+      try {
+        return require(`@/assets/${n}コマ.jpg?webp`);
+      } catch (error) {
+        return require(`@/assets/notfound.jpg`);
+      }
+    },
   },
 };
 </script>
