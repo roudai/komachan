@@ -2,13 +2,11 @@
   <div class="pagenavi">
     <div class="has-text-centered p-4 m-3 has-background-success-light">
       <span v-show="startKoma != 1">
-        <!-- <nuxt-link :to="prev">{{ prev }}コマ</nuxt-link> &lt;&lt; -->
-        {{ prev }}コマ
+        <nuxt-link :to="prev">{{ prev }}コマ</nuxt-link> &lt;&lt;
       </span>
       <b>{{ here }}</b>
       <span v-show="endKoma != totalEndKoma">
-        <!-- &gt;&gt; <nuxt-link :to="next">{{ next }}コマ</nuxt-link> -->
-        {{ next }}コマ
+        &gt;&gt; <nuxt-link :to="next">{{ next }}コマ</nuxt-link>
       </span>
     </div>
   </div>
