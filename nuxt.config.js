@@ -43,6 +43,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
+    'nuxt-lazy-load',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
