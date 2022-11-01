@@ -23,7 +23,7 @@
         <p>
           <a href="https://github.com/roudai/komachan">
             <img
-              :src="require(`@/assets/GitHub-Mark-32px.png?webp`)"
+              :src="require(`@/assets/GitHub-Mark-32px.png`)"
               class="github"
             />
           </a>

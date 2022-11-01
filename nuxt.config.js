@@ -37,7 +37,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    '@aceforth/nuxt-optimized-images',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -54,11 +53,9 @@ export default {
     hardSource: true,
   },
 
-  router: {
-    base: '/komachan/',
-  },
-
-  optimizedImages: {
-    optimizeImages: true,
+  server: {
+    port: process.env.PORT || 3000,
+    host: process.env.HOST || '0.0.0.0',
+    timing: false,
   },
 };

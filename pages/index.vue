@@ -1,6 +1,6 @@
 <template>
   <div class="mt-3">
-    <img :src="require(`@/assets/top.jpg?webp`)" class="mb-3" />
+    <img :src="require(`@/assets/top.jpg`)" class="mb-3" />
 
     <div class="select is-small mb-3">
       <select v-model="massKoma" @change="onChangeKoma">
