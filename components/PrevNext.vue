@@ -35,17 +35,28 @@ export default {
     this.totalEndKoma = this.$store.state.koma.totalEndKoma;
   },
   created() {
-    const diff = this.$store.state.koma.massKoma;
-    const totalEndKoma = this.$store.state.koma.totalEndKoma;
-    this.prev =
-      Number(this.startKoma) - diff + '-' + (Number(this.startKoma) - 1);
-    this.here = this.startKoma + '-' + this.endKoma;
-    if (this.endKoma + diff <= totalEndKoma) {
-      this.next =
-        Number(this.startKoma) + diff + '-' + (Number(this.endKoma) + diff);
-    } else {
-      this.next = Number(this.startKoma) + diff + '-' + totalEndKoma;
-    }
+    this.createPrevNext();
+  },
+  mounted() {
+    setTimeout(() => {
+      // リロード時にstoreが読み込めない場合の対応
+      if (this.next.slice(-2) === '-0') this.createPrevNext();
+    }, 0);
+  },
+  methods: {
+    createPrevNext() {
+      const diff = this.$store.state.koma.massKoma;
+      const totalEndKoma = this.$store.state.koma.totalEndKoma;
+      this.prev =
+        Number(this.startKoma) - diff + '-' + (Number(this.startKoma) - 1);
+      this.here = this.startKoma + '-' + this.endKoma;
+      if (this.endKoma + diff <= totalEndKoma) {
+        this.next =
+          Number(this.startKoma) + diff + '-' + (Number(this.endKoma) + diff);
+      } else {
+        this.next = Number(this.startKoma) + diff + '-' + totalEndKoma;
+      }
+    },
   },
 };
 </script>
