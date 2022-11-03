@@ -13,7 +13,7 @@
     </nav>
 
     <section class="main-content">
-      <div class="container column is-four-fifths">
+      <div class="container is-four-fifths">
         <Nuxt />
       </div>
     </section>
