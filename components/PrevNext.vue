@@ -1,6 +1,6 @@
 <template>
   <div class="pagenavi">
-    <div class="has-text-centered p-4 m-3 has-background-success-light">
+    <div class="has-text-centered p-4 m-3">
       <span v-show="startKoma != 1">
         <nuxt-link :to="prev">{{ prev }}コマ</nuxt-link> &lt;&lt;
       </span>
