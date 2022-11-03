@@ -12,7 +12,7 @@
       </div>
     </nav>
 
-    <section class="main-content columns">
+    <section class="main-content">
       <div class="container column is-four-fifths">
         <Nuxt />
       </div>
