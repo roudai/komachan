@@ -21,13 +21,13 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
+          Presented by <a href="https://twitter.com/w_ty_OvO">@w_ty_OvO</a>.
           <a href="https://github.com/roudai/komachan">
             <img
               :src="require(`@/assets/GitHub-Mark-32px.png`)"
               class="github"
             />
           </a>
-          Presented by <a href="https://twitter.com/w_ty_OvO">@w_ty_OvO</a>.
         </p>
       </div>
     </footer>
