@@ -1,9 +1,9 @@
 <template>
   <div>
     <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
-    <figure class="image m-3">
+    <figure class="image m-1">
       <div v-for="n in num" :key="n">
-        <img :src="imagePath(n)" class="mb-1" />
+        <img :src="imagePath(n)" class="mb-3" />
       </div>
     </figure>
     <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
