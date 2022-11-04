@@ -5,7 +5,7 @@
       role="navigation"
       aria-label="main navigation"
     >
-      <div class="navbar-brand container column is-four-fifths">
+      <div class="navbar-brand container column">
         <a class="navbar-item has-text-link-light" href="/">
           #1にち1コマちゃん
         </a>
