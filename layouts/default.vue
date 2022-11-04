@@ -24,7 +24,7 @@
           Presented by <a href="https://twitter.com/w_ty_OvO">@w_ty_OvO</a>.
           <a href="https://github.com/roudai/komachan">
             <img
-              :src="require(`@/assets/GitHub-Mark-32px.png`)"
+              :src="require(`@/assets/GitHub-Mark-32px.webp`)"
               class="github"
             />
           </a>
