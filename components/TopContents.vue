@@ -1,5 +1,5 @@
 <template>
-  <div class="box has-background-primary-light">
+  <div class="box has-background-primary-light mx-2">
     <h1 class="title is-5">{{ startKoma }}-{{ endKoma }} コマ</h1>
     <span v-for="(k, index) in koma" :key="k">
       <nuxt-link :to="`/${k}`">{{ k }}</nuxt-link>

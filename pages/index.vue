@@ -1,13 +1,13 @@
 <template>
-  <div class="mt-3">
+  <div>
     <img
       :src="require(`@/assets/top.jpg`)"
       class="mb-3"
-      width="1024"
-      heigt="310"
+      width="2048"
+      heigt="800"
     />
 
-    <div class="select is-small mb-3">
+    <div class="select is-small mb-3 ml-2">
       <select v-model="massKoma" @change="onChangeKoma">
         <option v-for="value in selectKoma" :key="value" :value="value">
           {{ value }}
