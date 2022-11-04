@@ -65,4 +65,7 @@ img.github {
   height: 1.2em;
   margin-bottom: -0.2em;
 }
+footer {
+  margin-top: 1.5rem;
+}
 </style>
