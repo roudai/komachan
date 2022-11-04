@@ -44,6 +44,7 @@ export default {
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
     'nuxt-lazy-load',
+    '@aceforth/nuxt-optimized-images',
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

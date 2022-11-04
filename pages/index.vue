@@ -1,7 +1,7 @@
 <template>
   <div>
     <img
-      :src="require(`@/assets/top.jpg`)"
+      :src="require(`@/assets/top.jpg?webp`)"
       class="mb-3"
       width="2048"
       heigt="800"

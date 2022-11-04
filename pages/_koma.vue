@@ -28,9 +28,9 @@ export default {
   methods: {
     imagePath(n) {
       try {
-        return require(`@/assets/${n}コマ.jpg`);
+        return require(`@/assets/${n}コマ.jpg?webp`);
       } catch (error) {
-        return require(`@/assets/notfound.jpg`);
+        return require(`@/assets/notfound.jpg?webp`);
       }
     },
   },
