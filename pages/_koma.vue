@@ -12,15 +12,26 @@
 
 <script>
 export default {
+  validate({ params }) {
+    return /^\d{1,4}[-]\d{1,4}$/.test(params.koma);
+  },
   data: () => ({
     startKoma: Number,
     endKoma: Number,
     num: [],
   }),
   created() {
+    const totalEndKoma = this.$store.state.koma.totalEndKoma;
     const koma = this.$route.params.koma;
     this.startKoma = Number(koma.split('-')[0]);
     this.endKoma = Number(koma.split('-')[1]);
+    if (
+      this.endKoma > totalEndKoma ||
+      this.startKoma >= this.endKoma ||
+      this.endKoma - this.startKoma > 99
+    ) {
+      this.$router.push({ path: '../layouts/error.vue', alia: '/b' });
+    }
     for (let i = this.startKoma; i <= this.endKoma; i += 1) {
       this.num.push(i);
     }
