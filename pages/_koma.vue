@@ -1,12 +1,18 @@
 <template>
   <div>
-    <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
-    <figure class="image m-1">
-      <div v-for="n in num" :key="n">
-        <img :src="imagePath(n)" class="mb-3" />
-      </div>
-    </figure>
-    <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
+    <div v-if="pageView">
+      <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
+      <figure class="image m-1">
+        <div v-for="n in num" :key="n">
+          <img :src="imagePath(n)" class="mb-3" />
+        </div>
+      </figure>
+      <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
+    </div>
+    <div v-else>
+      <h1 class="is-size-3 has-text-centered m-3">404 Not Found</h1>
+      <img :src="require(`@/assets/notfound.webp`)" />
+    </div>
   </div>
 </template>
 
@@ -18,6 +24,7 @@ export default {
   data: () => ({
     startKoma: Number,
     endKoma: Number,
+    pageView: true,
     num: [],
   }),
   created() {
@@ -25,15 +32,21 @@ export default {
     const koma = this.$route.params.koma;
     this.startKoma = Number(koma.split('-')[0]);
     this.endKoma = Number(koma.split('-')[1]);
+    const viewKoma = this.endKoma - this.startKoma + 1;
     if (
       this.endKoma > totalEndKoma ||
       this.startKoma >= this.endKoma ||
-      this.endKoma - this.startKoma > 99
+      (viewKoma !== 5 &&
+        viewKoma !== 10 &&
+        viewKoma !== 20 &&
+        viewKoma !== 50 &&
+        viewKoma !== 100)
     ) {
-      this.$router.push({ path: '../layouts/error.vue', alia: '/b' });
-    }
-    for (let i = this.startKoma; i <= this.endKoma; i += 1) {
-      this.num.push(i);
+      this.pageView = false;
+    } else {
+      for (let i = this.startKoma; i <= this.endKoma; i += 1) {
+        this.num.push(i);
+      }
     }
   },
   methods: {
