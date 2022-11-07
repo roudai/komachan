@@ -19,7 +19,7 @@
 <script>
 export default {
   validate({ params }) {
-    return /^\d{1,4}[-]\d{1,4}$/.test(params.koma);
+    return /^[1-9][0-9]{1,3}[-][1-9][0-9]{1,3}$/.test(params.koma);
   },
   data: () => ({
     startKoma: Number,
