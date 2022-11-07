@@ -5,6 +5,7 @@
       class="mb-3"
       width="2048"
       heigt="800"
+      alt="#1にち1コマちゃん"
     />
 
     <div class="select is-small mb-3 ml-2">

@@ -4,7 +4,7 @@
       <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
       <figure class="image m-1">
         <div v-for="n in num" :key="n">
-          <img :src="imagePath(n)" class="mb-3" />
+          <img :src="imagePath(n)" class="mb-3" alt="komachan" />
         </div>
       </figure>
       <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>

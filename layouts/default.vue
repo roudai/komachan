@@ -26,6 +26,7 @@
             <img
               :src="require(`@/assets/GitHub-Mark-32px.webp`)"
               class="github"
+              alt="github"
             />
           </a>
         </p>
