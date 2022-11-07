@@ -36,6 +36,7 @@ export default {
     if (
       this.endKoma > totalEndKoma ||
       this.startKoma >= this.endKoma ||
+      this.endKoma % 5 !== 0 ||
       (viewKoma !== 5 &&
         viewKoma !== 10 &&
         viewKoma !== 20 &&
