@@ -21,8 +21,12 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
-          Presented by <a href="https://twitter.com/w_ty_OvO">@w_ty_OvO</a>.
-          <a href="https://github.com/roudai/komachan">
+          Presented by
+          <a class="twitter" href="https://twitter.com/w_ty_OvO">@w_ty_OvO</a>.
+          <a
+            href="https://github.com/roudai/komachan"
+            aria-label="githubを開く"
+          >
             <img
               :src="require(`@/assets/GitHub-Mark-32px.webp`)"
               class="github"
@@ -68,5 +72,11 @@ img.github {
 }
 footer {
   margin-top: 1.5rem;
+}
+a {
+  color: #0000cd;
+}
+a.twitter {
+  color: #4b4b4b;
 }
 </style>
