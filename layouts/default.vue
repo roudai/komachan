@@ -1,17 +1,5 @@
 <template>
   <div class="has-background-info-light">
-    <nav
-      class="navbar header has-background-grey-dark"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand container column">
-        <a class="navbar-item has-text-link-light" href="/">
-          #1にち1コマちゃん
-        </a>
-      </div>
-    </nav>
-
     <section class="main-content">
       <div class="container is-four-fifths">
         <Nuxt />
