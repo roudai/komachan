@@ -34,20 +34,28 @@ export default {
     this.endKoma = Number(koma.split('-')[1]);
     const viewKoma = this.endKoma - this.startKoma + 1;
     if (
-      this.endKoma > totalEndKoma ||
-      this.startKoma >= this.endKoma ||
-      this.endKoma % 5 !== 0 ||
-      (viewKoma !== 5 &&
-        viewKoma !== 10 &&
-        viewKoma !== 20 &&
-        viewKoma !== 50 &&
-        viewKoma !== 100)
+      this.endKoma <= totalEndKoma &&
+      this.startKoma < this.endKoma &&
+      this.endKoma % 5 === 0 &&
+      (viewKoma === 5 ||
+        viewKoma === 10 ||
+        viewKoma === 20 ||
+        viewKoma === 50 ||
+        viewKoma === 100)
     ) {
-      this.pageView = false;
-    } else {
       for (let i = this.startKoma; i <= this.endKoma; i += 1) {
         this.num.push(i);
       }
+    } else if (
+      this.endKoma === totalEndKoma &&
+      this.startKoma < this.endKoma &&
+      viewKoma <= 100
+    ) {
+      for (let i = this.startKoma; i <= this.endKoma; i += 1) {
+        this.num.push(i);
+      }
+    } else {
+      this.pageView = false;
     }
   },
   methods: {
