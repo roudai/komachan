@@ -11,19 +11,21 @@
         </a>
       </div>
     </nav>
-    <div v-if="pageView">
-      <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
-      <figure class="image m-1">
-        <div v-for="n in num" :key="n">
-          <img :src="imagePath(n)" class="mb-3" alt="komachan" />
-        </div>
-      </figure>
-      <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
-    </div>
-    <div v-else>
-      <h1 class="is-size-5 has-text-centered m-3">404 Not Found</h1>
-      <img :src="require(`@/assets/notfound.webp`)" />
-    </div>
+    <client-only>
+      <div v-if="pageView">
+        <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
+        <figure class="image m-1">
+          <div v-for="n in num" :key="n">
+            <img :src="imagePath(n)" class="mb-3" alt="komachan" />
+          </div>
+        </figure>
+        <prev-next :start-koma="startKoma" :end-koma="endKoma"></prev-next>
+      </div>
+      <div v-else>
+        <h1 class="is-size-5 has-text-centered m-3">404 Not Found</h1>
+        <img :src="require(`@/assets/notfound.webp`)" />
+      </div>
+    </client-only>
   </div>
 </template>
 
