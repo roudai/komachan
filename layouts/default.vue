@@ -1,7 +1,9 @@
 <template>
   <div class="has-background-info-light">
-    <section class="main-content">
-      <div class="container is-four-fifths">
+    <section class="main-content columns ml-0 mr-0">
+      <div
+        class="container column is-12-mobile is-10-tablet is-6-desktop pl-0 pr-0"
+      >
         <Nuxt />
       </div>
     </section>
