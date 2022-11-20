@@ -50,6 +50,10 @@ export default {
     this.startKoma = Number(koma.split('-')[0]);
     this.endKoma = Number(koma.split('-')[1]);
     const viewKoma = this.endKoma - this.startKoma + 1;
+    console.log(totalEndKoma);
+    if (totalEndKoma === 0) {
+      this.$router.push('/');
+    }
     if (
       this.endKoma <= totalEndKoma &&
       this.startKoma < this.endKoma &&
