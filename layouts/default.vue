@@ -13,7 +13,7 @@
 img.github {
   width: 1.2em;
   height: 1.2em;
-  margin-bottom: -0.2em;
+  margin-bottom: -0.1em;
 }
 footer {
   margin-top: 1.5rem;
