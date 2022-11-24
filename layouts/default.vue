@@ -30,9 +30,6 @@
 </template>
 
 <style>
-body {
-  font-family: 'Mochiy Pop P One', sans-serif;
-}
 img.github {
   width: 1.2em;
   height: 1.2em;
