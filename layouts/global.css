@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'MochiyPop';
-  src: local('MochiyPop'), url(~assets/MochiyPopPOne-Regular.ttf) format('truetype');
+  font-family: 'MochiyPopPOne';
+  src: local('MochiyPopPOne'), url(~assets/MochiyPopPOne-Regular.ttf) format('truetype');
 }
 
 body {
-  font-family: 'MochiyPop';
+  font-family: 'MochiyPopPOne';
 }
