@@ -1,16 +1,10 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-background-grey-dark"
-      role="navigation"
-      aria-label="main navigation"
-    >
+    <nav class="navbar header has-background-grey-dark" role="navigation" aria-label="main navigation">
       <div class="navbar-brand container column">
         <a class="navbar-item has-text-link-light" href="/">
           <div v-if="endKoma <= 500">#1にち1コマちゃん</div>
-          <div v-else-if="endKoma <= 1000">
-            #1にち<span style="color: orange">4</span>コマちゃん
-          </div>
+          <div v-else-if="endKoma <= 1000">#1にち<span style="color: orange">4</span>コマちゃん</div>
           <div v-else>#1にち1コマちゃん</div>
         </a>
       </div>
@@ -57,20 +51,12 @@ export default {
       this.endKoma <= totalEndKoma &&
       this.startKoma < this.endKoma &&
       this.endKoma % 5 === 0 &&
-      (viewKoma === 5 ||
-        viewKoma === 10 ||
-        viewKoma === 20 ||
-        viewKoma === 50 ||
-        viewKoma === 100)
+      (viewKoma === 5 || viewKoma === 10 || viewKoma === 20 || viewKoma === 50 || viewKoma === 100)
     ) {
       for (let i = this.startKoma; i <= this.endKoma; i += 1) {
         this.num.push(i);
       }
-    } else if (
-      this.endKoma === totalEndKoma &&
-      this.startKoma < this.endKoma &&
-      viewKoma <= 100
-    ) {
+    } else if (this.endKoma === totalEndKoma && this.startKoma < this.endKoma && viewKoma <= 100) {
       for (let i = this.startKoma; i <= this.endKoma; i += 1) {
         this.num.push(i);
       }

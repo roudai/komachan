@@ -47,12 +47,10 @@ export default {
     createPrevNext() {
       const diff = this.$store.state.koma.massKoma;
       const totalEndKoma = this.$store.state.koma.totalEndKoma;
-      this.prev =
-        Number(this.startKoma) - diff + '-' + (Number(this.startKoma) - 1);
+      this.prev = Number(this.startKoma) - diff + '-' + (Number(this.startKoma) - 1);
       this.here = this.startKoma + '-' + this.endKoma;
       if (this.endKoma + diff <= totalEndKoma) {
-        this.next =
-          Number(this.startKoma) + diff + '-' + (Number(this.endKoma) + diff);
+        this.next = Number(this.startKoma) + diff + '-' + (Number(this.endKoma) + diff);
       } else {
         this.next = Number(this.startKoma) + diff + '-' + totalEndKoma;
       }
