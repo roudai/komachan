@@ -9,7 +9,7 @@
         </option>
       </select>
     </div>
-    コマずつよむ
+    <span>コマずつよむ</span>
 
     <top-contents
       v-for="k in startKoma"
@@ -58,3 +58,10 @@ export default {
   },
 };
 </script>
+
+<style>
+select {
+  text-align: -webkit-center;
+  font-family: 'MochiyPopPOne';
+}
+</style>
