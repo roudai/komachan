@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MochiyPopPOne';
-  src: local('MochiyPopPOne'), url(~assets/MochiyPopPOne-Regular.ttf) format('truetype');
+  src: local('MochiyPopPOne'), url(~assets/MochiyPopPOne-Subset.ttf) format('truetype');
 }
 
 body {
