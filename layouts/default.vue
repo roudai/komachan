@@ -10,6 +10,9 @@
 </template>
 
 <style>
+.container {
+  max-width: 1000px !important;
+}
 img.github {
   width: 1.2em;
   height: 1.2em;
