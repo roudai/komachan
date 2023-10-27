@@ -10,6 +10,16 @@ URL : [https://komachan.pw](https://komachan.pw)
 
 Google Cloud Run
 
+## 使用ツール
+
+### フォントサブセット作成
+
+[サブセットフォントメーカー](https://opentype.jp/subsetfontmk.htm)
+
+### JPEG⇒WEBP 変換
+
+[WEBP Converter](https://cloudconvert.com/webp-converter)
+
 ## 実行方法
 
 ```bash
