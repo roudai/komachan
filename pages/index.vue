@@ -25,7 +25,7 @@
 <script>
 export default {
   data: () => ({
-    totalEndKoma: 1015,
+    totalEndKoma: 1020,
     massKoma: 10,
     startKoma: [],
     selectKoma: [5, 10, 20, 50, 100],
