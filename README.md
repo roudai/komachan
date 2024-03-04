@@ -16,9 +16,21 @@ Google Cloud Run
 
 [サブセットフォントメーカー](https://opentype.jp/subsetfontmk.htm)
 
-### JPEG⇒WEBP 変換
+### JPEG⇒WEBP 変換(Mac)
 
-[WEBP Converter](https://cloudconvert.com/webp-converter)
+```bash
+# WebPのインストール
+$ brew install webp
+
+# 実行権限付与
+$ cd jpeg
+$ chmod 755 webp.sh
+
+# 必要なjpegファイル格納後、webp変換とフォルダ移動
+$ ./webp.sh
+
+# jpegファイルは自動削除されないので、手動で削除する
+```
 
 ## 実行方法
 
