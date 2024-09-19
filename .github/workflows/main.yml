@@ -4,7 +4,12 @@ on: [push, pull_request]
 
 jobs:
   cd:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [20.x]
 
     steps:
       - name: Checkout
@@ -12,6 +17,8 @@ jobs:
 
       - name: Setup node env
         uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
 
       - name: Install dependencies
         run: yarn
